@@ -15,7 +15,7 @@ Category.init({
     },
 }, {
     sequelize,
-    modelName: "category"
+    modelName: "categories"
 })
 
 module.exports = Category
