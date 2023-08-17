@@ -21,7 +21,7 @@ Recipe.init({
         type: DataTypes.INTEGER,
     },
     star: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.DECIMAL,
     },
     level: {
         type: DataTypes.STRING,
@@ -39,11 +39,11 @@ Recipe.init({
         type: DataTypes.STRING,
     },
     ingredients: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     directions: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     categories: {

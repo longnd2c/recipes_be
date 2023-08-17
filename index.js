@@ -2,12 +2,20 @@ const express = require('express');
 const app = express();
 const sequelize = require('./database')
 const RecipeRoutes = require("./src/routes/RecipeRoutes");
-
-sequelize.sync().then(() => console.log("db is ready"))
+require('dotenv').config();
 
 app.use(express.json());
 
-app.listen(8080, () => {
+sequelize
+  .sync()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+app.listen(process.env.PORT, () => {
     console.log("app is running");
 });
 
