@@ -54,7 +54,7 @@ Recipe.init({
     }
 }, {
     sequelize,
-    modelName: "recipe"
+    modelName: "recipes"
 })
 
 module.exports = Recipe
